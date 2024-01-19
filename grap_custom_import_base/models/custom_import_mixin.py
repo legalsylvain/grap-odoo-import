@@ -16,7 +16,6 @@ class CustomImportMixin(models.AbstractModel):
         return []
 
     def _custom_import_hook_vals(self, old_vals, new_vals):
-
         # Check if existing duplicates are present in the database
         for field in self._custom_import_prevent_duplicate_fields():
             if new_vals.get(field):
