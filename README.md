@@ -17,7 +17,14 @@
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[grap_custom_import_account_product_fiscal_classification](grap_custom_import_account_product_fiscal_classification/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for Account Product Fiscal Classification
+[grap_custom_import_base](grap_custom_import_base/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for base module
+[grap_custom_import_product](grap_custom_import_product/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for product module
+[grap_custom_import_product_supplierinfo_qty_multiplier](grap_custom_import_product_supplierinfo_qty_multiplier/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for product Supplierinfo Quantity Multiplier module
 
 [//]: # (end addons)
 
