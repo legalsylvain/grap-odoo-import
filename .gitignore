@@ -1,4 +1,6 @@
 # <GRAP>
+# Ignore Opened csv files
+.~lock.*
 # Do not share pdf file. (grap-odoo-business-supplier-invoice)
 *.pdf
 # </GRAP>

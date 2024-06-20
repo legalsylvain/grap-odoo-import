@@ -1,0 +1,4 @@
+name,uom_id,categ_id,barcode,list_price,grap_import_supplier_name,grap_import_supplier_product_code,grap_import_supplier_product_name,grap_import_supplier_gross_price
+Coca Cola (Import),Units,All / Saleable / Office Furniture,5000112602791,4.12,Coke Corp,CC,BOTTLE 33CL,3.33
+Produit B,Units,All / Saleable / Office Furniture,,8.00,Supplier From Product Import,PB,product_B,6.00
+Produit C,Units,All / Saleable,,2.30,,,,
