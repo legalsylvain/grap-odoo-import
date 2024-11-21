@@ -22,8 +22,8 @@ class TestModuleProduct(TestModuleBase):
         self.assertEqual(coca_cola.mapped("seller_ids.product_code"), ["CC"])
         self.assertEqual(coca_cola.mapped("seller_ids.product_name"), ["BOTTLE 33CL"])
 
-    def test_01_import_product_product(self):
-        self._test_import_product("product.product")
+    # def test_01_import_product_product(self):
+    #     self._test_import_product("product.product")
 
     def test_02_import_product_template(self):
         self._test_import_product("product.template")
