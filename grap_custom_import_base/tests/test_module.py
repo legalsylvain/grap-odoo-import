@@ -15,12 +15,14 @@ class TestModuleBase(TransactionCase):
         cls.ResPartner = cls.env["res.partner"]
         cls.Wizard = cls.env["base_import.import"]
 
-    def _test_import_file(self, module, model, file_name):
+    def _test_import_file(self, module, model, file_name, folder=False):
         preview_options = {"headers": True, "quoting": '"'}
         import_options = {"has_headers": True, "quoting": '"'}
 
         # Read File
-        file_path = get_module_resource(module, "tests/templates/", model, file_name)
+        if not folder:
+            folder = model
+        file_path = get_module_resource(module, "tests/templates/", folder, file_name)
         extension = file_path.split(".")[-1]
         if extension == "csv":
             file_type = "text/csv"

@@ -12,17 +12,27 @@ class TestModuleProductSupplierinfoQtyMultiplier(TestModuleProduct):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.ProductProduct = cls.env["product.product"]
         cls.classification_20 = cls.env.ref(
             "account_product_fiscal_classification.fiscal_classification_A_company_1"
         )
 
-    def test_01_import_product_account_product_fiscal_classification(self):
+    def _test_import_product_account_product_fiscal_classification(self, model):
         products, messages = self._test_import_file(
             "grap_custom_import_account_product_fiscal_classification",
-            "product.product",
+            model,
             "product.csv",
+            folder="product",
         )
         self.assertFalse(messages)
         self.assertEqual(len(products), 1)
         self.assertEqual(products.fiscal_classification_id, self.classification_20)
+
+    def test_01_import_product_account_product_fiscal_classification_product(self):
+        self._test_import_product_account_product_fiscal_classification(
+            "product.product"
+        )
+
+    def test_02_import_product_account_product_fiscal_classification_template(self):
+        self._test_import_product_account_product_fiscal_classification(
+            "product.template"
+        )
