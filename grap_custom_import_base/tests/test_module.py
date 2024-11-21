@@ -67,5 +67,15 @@ class TestModuleBase(TransactionCase):
         partners, messages = self._test_import_file(
             "grap_custom_import_base", "res.partner", "supplier_new_duplicates_vat.csv"
         )
+        self.assertEqual(len(messages), 2)
+        self.assertEqual(messages[0].get("type"), "error")
+        self.assertEqual(messages[1].get("type"), "error")
+
+    def test_04_import_supplier_existing_duplicates_vat(self):
+        partners, messages = self._test_import_file(
+            "grap_custom_import_base",
+            "res.partner",
+            "supplier_existing_duplicates_vat.csv",
+        )
         self.assertEqual(len(messages), 1)
         self.assertEqual(messages[0].get("type"), "error")
