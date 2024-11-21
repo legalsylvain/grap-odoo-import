@@ -3,9 +3,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "GRAP - Custom Import Product Supplierinfo Quantity Multiplier Module",
-    "summary": "Extra GRAP Tools to import data for"
-    " product Supplierinfo Quantity Multiplier module",
+    "name": "GRAP - Custom Product Import - Supplierinfo Quantity Multiplier Module",
+    "summary": "Extra GRAP Tools to import product data for"
+    " Product Supplierinfo Quantity Multiplier module",
     "version": "16.0.1.0.0",
     "category": "Tools",
     "author": "GRAP",

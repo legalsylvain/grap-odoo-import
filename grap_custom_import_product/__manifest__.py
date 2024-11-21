@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "GRAP - Custom Import Product Module",
+    "name": "GRAP - Custom Product Import",
     "summary": "Extra GRAP Tools to import data for product module",
     "version": "16.0.1.0.0",
     "category": "Tools",
