@@ -7,8 +7,8 @@ from odoo.exceptions import ValidationError
 from odoo.osv import expression
 
 
-class ProductProduct(models.Model):
-    _inherit = "product.product"
+class ProductTemplate(models.Model):
+    _inherit = "product.template"
 
     grap_import_vat_amount = fields.Float(string="VAT Amount (For import)", store=False)
 

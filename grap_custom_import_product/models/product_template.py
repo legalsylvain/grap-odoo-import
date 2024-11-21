@@ -6,8 +6,8 @@ from odoo import fields, models
 
 
 class ProductProduct(models.Model):
-    _name = "product.product"
-    _inherit = ["product.product", "custom.import.mixin"]
+    _name = "product.template"
+    _inherit = ["product.template", "custom.import.mixin"]
 
     def _custom_import_prevent_duplicate_fields(self):
         res = super()._custom_import_prevent_duplicate_fields()

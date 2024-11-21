@@ -5,8 +5,8 @@
 from odoo import fields, models
 
 
-class ProductProduct(models.Model):
-    _inherit = "product.product"
+class ProductTemplate(models.Model):
+    _inherit = "product.template"
 
     grap_import_supplier_multiplier_qty = fields.Float(
         string="Product Package Quantity - Supplier (For import)", store=False
