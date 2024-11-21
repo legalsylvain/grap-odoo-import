@@ -36,9 +36,6 @@ class CustomImportProductMixin(models.AbstractModel):
                             ),
                         )
                     ],
-                    "standard_price": self._custom_import_prepare_standard_price(
-                        old_vals
-                    ),
                 }
             )
 
@@ -50,6 +47,3 @@ class CustomImportProductMixin(models.AbstractModel):
             "product_name": vals.get("grap_import_supplier_product_name"),
             "min_qty": vals.get("grap_import_supplier_min_qty"),
         }
-
-    def _custom_import_prepare_standard_price(self, vals):
-        return vals.get("grap_import_supplier_gross_price")
