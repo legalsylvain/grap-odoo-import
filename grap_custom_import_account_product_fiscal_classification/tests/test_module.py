@@ -27,10 +27,10 @@ class TestModuleProductSupplierinfoQtyMultiplier(TestModuleProduct):
         self.assertEqual(len(products), 1)
         self.assertEqual(products.fiscal_classification_id, self.classification_20)
 
-    # def test_01_import_product_account_product_fiscal_classification_product(self):
-    #     self._test_import_product_account_product_fiscal_classification(
-    #         "product.product"
-    #     )
+    def test_01_import_product_account_product_fiscal_classification_product(self):
+        self._test_import_product_account_product_fiscal_classification(
+            "product.product"
+        )
 
     def test_02_import_product_account_product_fiscal_classification_template(self):
         self._test_import_product_account_product_fiscal_classification(

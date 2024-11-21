@@ -25,8 +25,8 @@ class TestModuleProductSupplierinfoQtyMultiplier(TestModuleProduct):
         self.assertEqual(len(products), 1)
         self.assertEqual(products.mapped("seller_ids.multiplier_qty"), [24.0])
 
-    # def test_01_import_product_supplierinfo_qty_multiplier_product(self):
-    #     self._test_import_product_supplierinfo_qty_multiplier("product.product")
+    def test_01_import_product_supplierinfo_qty_multiplier_product(self):
+        self._test_import_product_supplierinfo_qty_multiplier("product.product")
 
     def test_02_import_product_supplierinfo_qty_multiplier_template(self):
         self._test_import_product_supplierinfo_qty_multiplier("product.template")

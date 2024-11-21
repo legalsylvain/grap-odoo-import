@@ -11,8 +11,3 @@ class ProductTemplate(models.Model):
     grap_import_supplier_multiplier_qty = fields.Float(
         string="Product Package Quantity - Supplier (For import)", store=False
     )
-
-    def _custom_import_prepare_supplierinfo_vals(self, partner, vals):
-        res = super()._custom_import_prepare_supplierinfo_vals(partner, vals)
-        res["multiplier_qty"] = vals.get("grap_import_supplier_multiplier_qty")
-        return res
