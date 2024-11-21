@@ -5,7 +5,7 @@
 from odoo import fields, models
 
 
-class ResPartner(models.Model):
+class ProductProduct(models.Model):
     _name = "product.product"
     _inherit = ["product.product", "custom.import.mixin"]
 
