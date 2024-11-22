@@ -1,2 +1,2 @@
-name,uom_id,categ_id,barcode,list_price,grap_import_supplier_name,grap_import_supplier_product_code,grap_import_supplier_product_name,grap_import_supplier_gross_price,grap_import_supplier_min_qty,grap_import_supplier_multiplier_qty
-Mention Good (Late chocolate),Units,All / Saleable,3222472195092,2.29,Ready Mat,GOOD,MENTION GOOD,1.98,2,24
+name,uom_id,categ_id,grap_import_supplier_name,grap_import_supplier_multiplier_qty
+Mention Good (Late chocolate),Units,All / Saleable,Ready Mat,24
