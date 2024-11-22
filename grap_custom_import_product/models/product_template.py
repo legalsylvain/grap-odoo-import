@@ -13,14 +13,17 @@ class ProductTemplate(models.Model):
         string="Supplier Name (For import)", store=False
     )
     grap_import_supplier_product_code = fields.Char(
-        string="Product Code - Supplier (For import)", store=False
+        string="Supplier Product Code (For import)", store=False
     )
     grap_import_supplier_product_name = fields.Char(
-        string="Product Name - Supplier (For import)", store=False
+        string="Supplier Product Name (For import)", store=False
     )
     grap_import_supplier_min_qty = fields.Monetary(
-        string="Product Min Quantity - Supplier (For import)", store=False
+        string="Supplier Min Quantity (For import)", store=False
     )
     grap_import_supplier_gross_price = fields.Monetary(
-        string="Product Gross Price - Supplier (For import)", store=False
+        string="Supplier Gross Price (For import)", store=False
+    )
+    grap_import_supplier_invoice_qty = fields.Float(
+        string="Supplier Invoice Quantity (For import)", store=False
     )

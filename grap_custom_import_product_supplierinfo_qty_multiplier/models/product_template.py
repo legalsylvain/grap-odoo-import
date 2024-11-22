@@ -9,5 +9,5 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     grap_import_supplier_multiplier_qty = fields.Float(
-        string="Product Package Quantity - Supplier (For import)", store=False
+        string="Supplier Package Quantity (For import)", store=False
     )
