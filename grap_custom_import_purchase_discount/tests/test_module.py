@@ -14,19 +14,19 @@ class TestModuleProductSupplierinfoQtyMultiplier(TestModuleProduct):
         super().setUpClass()
         cls.ProductProduct = cls.env["product.product"]
 
-    def _test_import_product_supplierinfo_qty_multiplier(self, model):
+    def _test_import_purchase_discount(self, model):
         products, messages = self._test_import_file(
-            "grap_custom_import_product_supplierinfo_qty_multiplier",
+            "grap_custom_import_purchase_discount",
             model,
             "product.csv",
             folder="product",
         )
         self.assertFalse(messages)
         self.assertEqual(len(products), 1)
-        self.assertEqual(products.seller_ids.multiplier_qty, 24.0)
+        self.assertEqual(products.seller_ids.discount, 10.0)
 
-    def test_01_import_product_supplierinfo_qty_multiplier_product(self):
-        self._test_import_product_supplierinfo_qty_multiplier("product.product")
+    def test_01_import_purchase_discount_product(self):
+        self._test_import_purchase_discount("product.product")
 
-    def test_02_import_product_supplierinfo_qty_multiplier_template(self):
-        self._test_import_product_supplierinfo_qty_multiplier("product.template")
+    def test_02_import_purchase_discount_template(self):
+        self._test_import_purchase_discount("product.template")
