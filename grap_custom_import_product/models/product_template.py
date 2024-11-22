@@ -2,7 +2,7 @@
 # @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models
+from odoo import _, api, fields, models
 
 
 class ProductTemplate(models.Model):
@@ -27,3 +27,12 @@ class ProductTemplate(models.Model):
     grap_import_supplier_invoice_qty = fields.Float(
         string="Supplier Invoice Quantity (For import)", store=False
     )
+
+    @api.model
+    def get_import_templates(self):
+        return [
+            {
+                "label": _("Import Template for Fermente CAE"),
+                "template": "grap_custom_import_product/static/xlsx/template_product.xlsx",
+            }
+        ]
