@@ -8,7 +8,7 @@ from odoo.addons.grap_custom_import_product.tests.test_module import TestModuleP
 
 
 @tagged("post_install", "-at_install")
-class TestModulePurchaseDiscount(TestModuleProduct):
+class TestModulePurchaseTripleDiscount(TestModuleProduct):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -16,14 +16,16 @@ class TestModulePurchaseDiscount(TestModuleProduct):
 
     def _test_import_purchase_discount(self, model):
         products, messages = self._test_import_file(
-            "grap_custom_import_purchase_discount",
+            "grap_custom_import_purchase_triple_discount",
             model,
             "product.csv",
             folder="product",
         )
         self.assertFalse(messages)
         self.assertEqual(len(products), 1)
-        self.assertEqual(products.seller_ids.discount, 10.0)
+        self.assertEqual(products.seller_ids.discount, 33.0)
+        self.assertEqual(products.seller_ids.discount2, 22.0)
+        self.assertEqual(products.seller_ids.discount3, 11.0)
 
     def test_01_import_purchase_discount_product(self):
         self._test_import_purchase_discount("product.product")

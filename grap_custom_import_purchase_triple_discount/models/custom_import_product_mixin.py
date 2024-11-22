@@ -11,5 +11,6 @@ class CustomImportProductMixin(models.AbstractModel):
 
     def _custom_import_prepare_supplierinfo_vals(self, partner, vals):
         res = super()._custom_import_prepare_supplierinfo_vals(partner, vals)
-        res["discount"] = (vals.get("grap_import_supplier_discount_1") or 0.0) * 100
+        res["discount2"] = (vals.get("grap_import_supplier_discount_2") or 0.0) * 100
+        res["discount3"] = (vals.get("grap_import_supplier_discount_3") or 0.0) * 100
         return res
