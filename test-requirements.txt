@@ -1,0 +1,2 @@
+# grap/grap-odoo-business
+git+https://github.com/grap/grap-odoo-business@16.0#subdirectory=setup/product_label

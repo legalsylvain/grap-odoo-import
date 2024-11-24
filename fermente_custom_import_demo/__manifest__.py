@@ -14,11 +14,13 @@
         # OCA
         "account_product_fiscal_classification",
         "l10n_fr_department_product_origin",
+        "product_net_weight",
         "product_origin",
         "product_supplierinfo_qty_multiplier",
         "purchase_discount",
         "purchase_triple_discount",
         # GRAP
+        "product_label",
         "fermente_custom_import_base",
         "fermente_custom_import_product",
     ],
