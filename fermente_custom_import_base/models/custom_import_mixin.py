@@ -72,11 +72,20 @@ class CustomImportMixin(models.AbstractModel):
 
     # Overload Section
     def _load_records_create(self, vals_list):
+        # This function is called in many places in odoo Core
+        # to create records, specially when loading
+        # 'demo' or 'data' from xml files.
+        # We only want to alter data in a 'import' process.
+        if not self.env.context.get("import_file"):
+            return super()._load_records_create(vals_list)
+
         new_vals_list = []
         for vals in vals_list:
             new_vals = vals.copy()
             self._custom_import_hook_vals(vals, new_vals)
             new_vals_list.append(new_vals)
+
         # TODO, move this check in another part
         self._custom_import_check_duplicates_new_vals(new_vals_list)
+
         return super()._load_records_create(new_vals_list)

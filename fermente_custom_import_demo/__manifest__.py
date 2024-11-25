@@ -14,6 +14,7 @@
         # OCA
         "account_product_fiscal_classification",
         "l10n_fr_department_product_origin",
+        "product_margin_classification",
         "product_net_weight",
         "product_origin",
         "product_supplierinfo_qty_multiplier",
