@@ -1,2 +1,3 @@
-name,uom_id,categ_id,grap_import_vat_amount
-Mention Good (Late chocolate),Units,All / Saleable,0.20
+name,uom_id,categ_id,grap_import_vat_amount,grap_import_list_price_vat_excl,grap_import_list_price_vat_incl
+Product 1,Units,All / Saleable,0.20,1,1.21
+Product 2,Units,All / Saleable,0.20,0.99,1.20

@@ -9,3 +9,11 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     grap_import_vat_amount = fields.Float(string="VAT Amount (For import)", store=False)
+
+    grap_import_list_price_vat_excl = fields.Float(
+        string="Sale Price Vat Excl (For import)", store=False
+    )
+
+    grap_import_list_price_vat_incl = fields.Float(
+        string="Sale Price Vat Incl (For import)", store=False
+    )
