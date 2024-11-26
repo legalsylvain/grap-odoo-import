@@ -11,9 +11,4 @@ logger = logging.getLogger(__name__)
 
 class ResPartner(models.Model):
     _name = "res.partner"
-    _inherit = ["res.partner", "custom.import.mixin"]
-
-    def _custom_import_prevent_duplicate_fields(self):
-        res = super()._custom_import_prevent_duplicate_fields()
-        res += ["name", "vat"]
-        return res
+    _inherit = ["res.partner", "custom.import.partner.mixin"]

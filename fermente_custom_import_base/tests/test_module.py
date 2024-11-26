@@ -20,8 +20,7 @@ class TestModuleBase(TransactionCase):
         import_options = {"has_headers": True, "quoting": '"'}
 
         # Read File
-        if not folder:
-            folder = model
+        folder = folder and folder or model
         file_path = get_module_resource(module, "tests/templates/", folder, file_name)
         extension = file_path.split(".")[-1]
         if extension == "csv":
@@ -45,41 +44,3 @@ class TestModuleBase(TransactionCase):
 
         items = self.env[model].browse(results.get("ids"))
         return items, results["messages"]
-
-    def test_01_import_supplier(self):
-        partners, messages = self._test_import_file(
-            "fermente_custom_import_base", "res.partner", "supplier.csv"
-        )
-        self.assertFalse(messages)
-        self.assertEqual(len(partners), 1)
-        self.assertEqual(partners.name, "Relais Vert")
-
-    def test_02_existing_duplicates_name(self):
-        partners, messages = self._test_import_file(
-            "fermente_custom_import_base", "res.partner", "supplier.csv"
-        )
-        self.assertFalse(messages)
-        partners, messages = self._test_import_file(
-            "fermente_custom_import_base", "res.partner", "supplier.csv"
-        )
-        self.assertEqual(len(messages), 1)
-        self.assertEqual(messages[0].get("type"), "error")
-
-    def test_03_import_supplier_new_duplicates_vat(self):
-        partners, messages = self._test_import_file(
-            "fermente_custom_import_base",
-            "res.partner",
-            "supplier_new_duplicates_vat.csv",
-        )
-        self.assertEqual(len(messages), 2)
-        self.assertEqual(messages[0].get("type"), "error")
-        self.assertEqual(messages[1].get("type"), "error")
-
-    def test_04_import_supplier_existing_duplicates_vat(self):
-        partners, messages = self._test_import_file(
-            "fermente_custom_import_base",
-            "res.partner",
-            "supplier_existing_duplicates_vat.csv",
-        )
-        self.assertEqual(len(messages), 1)
-        self.assertEqual(messages[0].get("type"), "error")

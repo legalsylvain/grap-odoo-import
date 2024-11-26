@@ -31,6 +31,9 @@ class CustomImportMixin(models.AbstractModel):
                     )
         return new_vals
 
+    def _custom_import_hook_check(self, vals_list):
+        self._custom_import_check_duplicates_new_vals(vals_list)
+
     def _custom_import_check_duplicates_new_vals(self, vals_list):
         for field in self._custom_import_prevent_duplicate_fields():
             duplicates = []
@@ -85,7 +88,6 @@ class CustomImportMixin(models.AbstractModel):
             self._custom_import_hook_vals(vals, new_vals)
             new_vals_list.append(new_vals)
 
-        # TODO, move this check in another part
-        self._custom_import_check_duplicates_new_vals(new_vals_list)
+        self._custom_import_hook_check(new_vals_list)
 
         return super()._load_records_create(new_vals_list)

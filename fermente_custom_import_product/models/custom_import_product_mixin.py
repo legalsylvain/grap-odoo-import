@@ -16,11 +16,11 @@ class CustomImportProductMixin(models.AbstractModel):
         res += ["name", "barcode"]
         return res
 
-    # pylint: disable=missing-return
     def _custom_import_hook_vals(self, old_vals, new_vals):
         super()._custom_import_hook_vals(old_vals, new_vals)
         self._custom_import_handle_supplierinfo_vals(old_vals, new_vals)
         self._custom_import_handle_uom_po_vals(old_vals, new_vals)
+        return
 
     def _custom_import_handle_supplierinfo_vals(self, old_vals, new_vals):
         supplier = self._custom_import_get_or_create(

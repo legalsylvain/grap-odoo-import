@@ -11,10 +11,10 @@ class CustomImportProductMixin(models.AbstractModel):
     _name = "custom.import.product.mixin"
     _inherit = ["custom.import.product.mixin"]
 
-    # pylint: disable=missing-return
     def _custom_import_hook_vals(self, old_vals, new_vals):
         super()._custom_import_hook_vals(old_vals, new_vals)
         self._custom_import_handle_fiscal_classification_id(old_vals, new_vals)
+        return
 
     def _custom_import_fiscal_classification_domain(self, vat_amount):
         domain = expression.OR(
