@@ -21,10 +21,16 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[grap_custom_import_account_product_fiscal_classification](grap_custom_import_account_product_fiscal_classification/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for Account Product Fiscal Classification
-[grap_custom_import_base](grap_custom_import_base/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for base module
-[grap_custom_import_product](grap_custom_import_product/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for product module
-[grap_custom_import_product_supplierinfo_qty_multiplier](grap_custom_import_product_supplierinfo_qty_multiplier/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for product Supplierinfo Quantity Multiplier module
+[fermente_custom_import_account_product_fiscal_classification](fermente_custom_import_account_product_fiscal_classification/) | 16.0.1.0.0 |  | Extra GRAP Tools to import product data for Account Product Fiscal Classification
+[fermente_custom_import_base](fermente_custom_import_base/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for base module
+[fermente_custom_import_demo](fermente_custom_import_demo/) | 16.0.1.0.0 |  | Provide Demo Fermente template (xlsx file) to import data
+[fermente_custom_import_partner_firstname](fermente_custom_import_partner_firstname/) | 16.0.1.0.0 |  | Extra GRAP Tools to import partner data for Partner First Name module
+[fermente_custom_import_product](fermente_custom_import_product/) | 16.0.1.0.0 |  | Extra GRAP Tools to import data for product module
+[fermente_custom_import_product_label](fermente_custom_import_product_label/) | 16.0.1.0.0 |  | Extra GRAP Tools to import product data for Product Label module
+[fermente_custom_import_product_margin_classification](fermente_custom_import_product_margin_classification/) | 16.0.1.0.0 |  | Extra GRAP Tools to import product data for Product Margin Classification module
+[fermente_custom_import_product_supplierinfo_qty_multiplier](fermente_custom_import_product_supplierinfo_qty_multiplier/) | 16.0.1.0.0 |  | Extra GRAP Tools to import product data for Product Supplierinfo Quantity Multiplier module
+[fermente_custom_import_purchase_discount](fermente_custom_import_purchase_discount/) | 16.0.1.0.0 |  | Extra GRAP Tools to import product data for Purchase Discount module
+[fermente_custom_import_purchase_triple_discount](fermente_custom_import_purchase_triple_discount/) | 16.0.1.0.0 |  | Extra GRAP Tools to import product data for Purchase Triple Discount module
 
 [//]: # (end addons)
 
