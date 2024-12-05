@@ -1,0 +1,5 @@
+name,uom_id,categ_id,grap_import_margin_rate
+Product 1,Units,All / Saleable,0.333333
+Product 2,Units,All / Saleable,0.5
+Product 3,Units,All / Saleable,0.4123
+Product 4,Units,All / Saleable,0.4123
