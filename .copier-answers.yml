@@ -1,8 +1,9 @@
 # Do NOT update manually; changes here will be overwritten by Copier
-_commit: 3a7882d
-_src_path: https://github.com/grap/oca-addons-repo-template-new.git
+_commit: b23859c
+_src_path: https://github.com/grap/oca-addons-repo-template-v16
 ci: GitHub
 convert_readme_fragments_to_markdown: false
+enable_checklog_odoo: false
 generate_requirements_txt: true
 github_check_license: true
 github_ci_extra_env: {}
@@ -11,7 +12,6 @@ github_enable_makepot: false
 github_enable_stale_action: false
 github_enforce_dev_status_compatibility: false
 include_wkhtmltopdf: false
-odoo_real_version: 16.0
 odoo_test_flavor: Odoo
 odoo_version: 16.0
 org_name: GRAP
