@@ -25,7 +25,10 @@ class TestModulePurchaseDiscount(TestModuleProduct):
         )
         self.assertFalse(messages)
         self.assertEqual(len(products), 1)
-        self.assertEqual(products.seller_ids.discount, 10.0)
+        if "discount1" in self.env["product.supplierinfo"]._fields:
+            self.assertEqual(products.seller_ids.discount1, 10.0)
+        else:
+            self.assertEqual(products.seller_ids.discount, 10.0)
 
     def test_01_import_purchase_discount_product(self):
         self._test_import_purchase_discount("product.product")
