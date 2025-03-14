@@ -25,7 +25,7 @@ class TestModulePurchaseTripleDiscount(TestModuleProduct):
         )
         self.assertFalse(messages)
         self.assertEqual(len(products), 1)
-        self.assertEqual(products.seller_ids.discount, 33.0)
+        self.assertEqual(products.seller_ids.discount1, 33.0)
         self.assertEqual(products.seller_ids.discount2, 22.0)
         self.assertEqual(products.seller_ids.discount3, 11.0)
 

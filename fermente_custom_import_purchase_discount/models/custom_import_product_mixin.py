@@ -11,5 +11,9 @@ class CustomImportProductMixin(models.AbstractModel):
 
     def _custom_import_prepare_supplierinfo_vals(self, partner, vals):
         res = super()._custom_import_prepare_supplierinfo_vals(partner, vals)
-        res["discount"] = (vals.get("grap_import_supplier_discount_1") or 0.0) * 100
+        discount_value = (vals.get("grap_import_supplier_discount_1") or 0.0) * 100
+        if "discount1" in self.env["product.supplierinfo"]._fields:
+            res["discount1"] = discount_value
+        else:
+            res["discount"] = discount_value
         return res
